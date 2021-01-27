@@ -1,28 +1,13 @@
-<
-<h1>Good-Burger!</h1>
+<div class="row text-white bg-dark mb-4">
+  <div class="col-12 card-header">
+    <h1 class= "text-center">Good-Burger!</h1>
+    
+  </div>
+</div>
 
-<h2>burgers that need to be devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
+<div>
+<h2 class= "text-center">Add a burger</h2>
+<form class="create-form text-center">
 
   <div class="form-group">
     <label for="burger">burger Name:</label>
@@ -37,3 +22,71 @@
 
   <button type="submit">Add burger</button>
 </form>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">burgers that need to be devoured!</h5>
+        <p class="card-text">{{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Burgers that are devoured!</h5>
+        <p class="card-text">{{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- <h2>burgers that need to be devoured!</h2> --}}
+
+{{!-- <ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul> --}}
+
+{{!-- <h2>Burgers that are devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul> --}}
+
+{{!-- <h2>Add a burger</h2>
+<form class="create-form ">
+
+  <div class="form-group">
+    <label for="burger">burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="burgery">devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> burgery!<br>
+    <input type="radio" name="devoured" value="0"> devoured
+  </div>
+
+  <button type="submit">Add burger</button>
+</form>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div> --}}
