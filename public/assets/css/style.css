@@ -1,7 +1,11 @@
+body {
+  background-color: rgb(209,137,46);
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: #D1892E;
 }
 
 .label {

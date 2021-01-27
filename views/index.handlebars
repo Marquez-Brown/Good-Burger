@@ -5,6 +5,7 @@
   </div>
 </div>
 
+{{!-- form for adding a burger --}}
 <div>
 <h2 class= "text-center">Add a burger</h2>
 <form class="create-form text-center">
@@ -16,10 +17,10 @@
 
   <div class="form-group">
     <label for="burgery">devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> burgery!<br>
-    <input type="radio" name="devoured" value="0"> devoured
+    <input type="radio" name="devoured" value="1" checked> Already eated!<br>
+    <input type="radio" name="devoured" value="0"> Going to be eated!
   </div>
-
+{{!-- First Card  for showing burgers waiting to be devoured--}}
   <button type="submit">Add burger</button>
 </form>
 <div class="row">
@@ -32,10 +33,11 @@
       {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
+
+{{!-- Second card for showing devoured burgers --}}
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -45,7 +47,6 @@
       {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
